@@ -20,6 +20,13 @@
       "department": "HR",
       "email": "mike.smith@company.com",
       "salary": 48000
+    },
+     {
+      "id": 104,
+      "name": "Madhusudan Amoli",
+      "department": "CEO",
+      "email": "madhusudan.amoli@company.com",
+      "salary": 100000
     }
   ]
 }

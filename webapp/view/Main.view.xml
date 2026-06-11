@@ -4,8 +4,10 @@
     <Page id="page" title="{i18n>title}">
     <Panel headerText="Select an Employee from the list " expandable="true" expanded="true">
         <content>
-        <SearchField
+        <SearchField placeholder="Search by name..."
     liveChange=".onSearch"/>
+    <SearchField placeholder="Search by department..."
+    liveChange=".onSearch2"/>
         <List id="emplist" headerText="Emplyees" items="{emp>/employees}" mode="SingleSelectMaster" selectionChange=".onEmployeeSelect">
         <StandardListItem id="employeeItem" title="{emp>name}" description="{emp>department}" type="Active"/>
 
