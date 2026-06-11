@@ -1,0 +1,37 @@
+<mvc:View controllerName="student.com.sap.training.advancedsapui5.employeedirectory.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Panel headerText="Select an Employee from the list " expandable="true" expanded="true">
+        <content>
+        <SearchField
+    liveChange=".onSearch"/>
+        <List id="emplist" headerText="Emplyees" items="{emp>/employees}" mode="SingleSelectMaster" selectionChange=".onEmployeeSelect">
+        <StandardListItem id="employeeItem" title="{emp>name}" description="{emp>department}" type="Active"/>
+
+        </List>
+      
+        <Table class="employeeDetails" id="empTable" >
+        <columns>
+            <Column><Text text="ID" /></Column>
+            <Column><Text text="Name"/></Column>
+            <Column><Text text="Department"/></Column>
+            <Column><Text text="Email"/></Column>
+            <Column><Text text="Salary"/></Column>
+        </columns>
+        <ColumnListItem> 
+        <cells>
+            <Text text="{emp>/selectedEmployee/id} "/>
+            <Text text="{emp>/selectedEmployee/name}"/>
+            <Text text="{emp>/selectedEmployee/department}"/>
+            <Text text="{emp>/selectedEmployee/email}"/>
+            <Text text="{emp>/selectedEmployee/salary}"/>
+        </cells>
+        </ColumnListItem>
+        </Table>
+        </content>
+
+    </Panel>
+
+    </Page>
+</mvc:View>

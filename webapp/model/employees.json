@@ -1,0 +1,25 @@
+{
+  "employees": [
+    {
+      "id": 101,
+      "name": "John Doe",
+      "department": "IT",
+      "email": "john.doe@company.com",
+      "salary": 55000
+    },
+    {
+      "id": 102,
+      "name": "Sarah Wilson",
+      "department": "Finance",
+      "email": "sarah.wilson@company.com",
+      "salary": 62000
+    },
+    {
+      "id": 103,
+      "name": "Mike Smith",
+      "department": "HR",
+      "email": "mike.smith@company.com",
+      "salary": 48000
+    }
+  ]
+}
