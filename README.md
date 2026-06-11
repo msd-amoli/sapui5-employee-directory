@@ -33,3 +33,41 @@ An SAP Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+# SAPUI5 Employee Directory
+
+Learning project built using SAPUI5 in SAP Business Application Studio.
+
+## Features Completed
+
+### Day 1
+
+- Project creation using SAPUI5 template
+- JSON Model loading
+- Named model binding (`emp`)
+- Employee List display
+- Selection handling
+- Display selected employee details
+- Understanding:
+  - Default vs Named Models
+  - Property Paths
+  - Binding Context
+  - getBindingContext()
+  - getObject()
+  - setProperty()
+
+## Technologies
+
+- SAPUI5
+- JavaScript
+- XML Views
+- JSONModel
+- Git
+
+## Next Steps
+
+- Employee Search
+- Filtering
+- Dialog Fragments
+- Routing
+- CRUD Operations
+
