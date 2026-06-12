@@ -25,23 +25,49 @@ sap.ui.define([
             md.setProperty("/selectedEmployee",empobj);
             
         },
-        onSearch:function(evt){
-            const sQuery = evt.getParameter("newValue"); //get the search query
-            const lst = this.byId("emplist");
-            const binding = lst.getBinding("items");
-            if(!sQuery){
-                binding.filter([]); //if search query is empty, remove all filters
-                return;
-            }
-            const oFilter = new Filter("name", FilterOperator.Contains, sQuery); //create a filter for the name property
-                // const oFilter = new sap.ui.model.Filter
-                // ("name",
-                //     sap.ui.model.FilterOperator.Contains,sQuery); //create a filter for the name property
+       onSearch: function (evt) {
 
-                
-            binding.filter([oFilter]);
-            console.log(oFilter);
-        },
+    const sQuery = evt.getParameter("newValue");
+
+    const oList = this.byId("emplist");
+    const oBinding = oList.getBinding("items");
+
+    if (!sQuery) {
+        oBinding.filter([]);
+        return;
+    }
+
+    const aFilters = [
+
+        new Filter(
+            "name",
+            FilterOperator.Contains,
+            sQuery
+        ),
+
+        new Filter(
+            "department",
+            FilterOperator.Contains,
+            sQuery
+        ),
+
+        new Filter(
+            "email",
+            FilterOperator.Contains,
+            sQuery
+        )
+
+    ];
+
+    const oCombinedFilter =
+        new Filter({
+            filters: aFilters,
+            and: false
+        });
+
+    oBinding.filter(oCombinedFilter);
+
+},
         onSearch2:function(evt){
             const qry = evt.getParameter("newValue");
             const lst = this.byId("emplist");
