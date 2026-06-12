@@ -2,8 +2,9 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], (Controller, JSONModel, Filter, FilterOperator) => {
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/Sorter"
+], (Controller, JSONModel, Filter, FilterOperator, Sorter) => {
     "use strict";
 
     return Controller.extend("student.com.sap.training.advancedsapui5.employeedirectory.controller.Main", {
@@ -78,6 +79,14 @@ sap.ui.define([
             }
             const ofilter = new Filter("department", FilterOperator.Contains,qry);
             binding.filter([ofilter]);
+        },
+        onSort:function(evt){
+            const lst = this.byId("emplist");
+            const binding = lst.getBinding("items");
+            const v = evt.getSource().getSelectedKey();
+            console.log(v);
+            const oSorter = new Sorter(v,false);
+            binding.sort(oSorter);
         }
     });
 });

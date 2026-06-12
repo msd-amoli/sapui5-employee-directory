@@ -1,4 +1,4 @@
-<mvc:View controllerName="student.com.sap.training.advancedsapui5.employeedirectory.controller.Main"
+<mvc:View xmlns:core="sap.ui.core" controllerName="student.com.sap.training.advancedsapui5.employeedirectory.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
@@ -8,6 +8,13 @@
     liveChange=".onSearch"/>
     <SearchField placeholder="Search by department..."
     liveChange=".onSearch2"/>
+    <Select id="sortlist" change=".onSort">
+        <items>
+        <core:Item key="" text="Sort by..." />
+        <core:Item key="name" text="Sort by Name" />
+        <core:Item key="department" text="Sort by Department" />
+        </items> 
+           </Select>
         <List id="emplist" headerText="Emplyees" items="{emp>/employees}" mode="SingleSelectMaster" selectionChange=".onEmployeeSelect">
         <StandardListItem id="employeeItem" title="{emp>name}" description="{emp>department}" type="Active"/>
 
