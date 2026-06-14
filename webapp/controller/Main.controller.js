@@ -19,13 +19,50 @@ sap.ui.define([
         },
         onEmployeeSelect:function(evt){
             console.log("event fired");
-            const itm = evt.getParameter("listItem").getBindingContext("emp");//get the selected item and its binding context
+            const itm = evt.getParameter("listItem").getBindingContext("emp");//get the selected item row and its binding context
             const empobj = itm.getObject(); //get the object of the selected item
            
             const md = this.getView().getModel("emp");
             md.setProperty("/selectedEmployee",empobj);
+
+             if(!this._oDialog){
+                this._oDialog = this.loadFragment({
+                    name:"student.com.sap.training.advancedsapui5.employeedirectory.fragment.EmployeeDialog"
+                });
+            }
+                this._oDialog.then((oDialog)=>{
+                    oDialog.open();
+                }); 
+             
             
         },
+        onCloseDialog:function(){
+            this._oDialog.then((oDialog)=>{
+                oDialog.close();
+            });
+        },
+    onDeleteEmployee: function () {
+
+    const oModel = this.getView().getModel("emp");
+
+    const aEmployees = oModel.getProperty("/employees");
+
+    const oSelected = oModel.getProperty("/selectedEmployee");
+
+    const iIndex = aEmployees.indexOf(oSelected);
+
+    if (iIndex > -1) {
+        aEmployees.splice(iIndex, 1);
+
+        oModel.setProperty("/employees", aEmployees);
+
+        oModel.setProperty("/selectedEmployee", null);
+    }
+},
+    
+
+   
+
        onSearch: function (evt) {
 
     const sQuery = evt.getParameter("newValue");
