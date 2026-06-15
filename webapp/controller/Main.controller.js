@@ -141,6 +141,7 @@ sap.ui.define([
             const aemp = oModel.getProperty("/employees");
             const newemp = oModel.getProperty("/newEmployee");
             console.log(newemp);
+            console.log(aemp)
             aemp.push({
                 id: Date.now(),
                 name: newemp.name,
