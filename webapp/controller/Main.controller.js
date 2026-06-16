@@ -142,6 +142,12 @@ sap.ui.define([
             const newemp = oModel.getProperty("/newEmployee");
             console.log(newemp);
             console.log(aemp)
+
+            if(!newemp.name || !newemp.department || !newemp.email || !newemp.salary){
+                sap.m.MessageToast.show("Please fill all the fields");
+                return;
+            }
+
             aemp.push({
                 id: Date.now(),
                 name: newemp.name,
@@ -150,6 +156,13 @@ sap.ui.define([
                 salary: newemp.salary
             });
             oModel.setProperty("/employees", aemp);
+
+            oModel.setProperty("/newEmployee", {
+    name: "",
+    department: "",
+    email: "",
+    salary: ""
+});
         }
     });
 });

@@ -49,7 +49,7 @@
     <Title text="add Employee"/>
     <Input placeholder="Enter name" value="{emp>/newEmployee/name}"/>
     <Input placeholder="Enter department" value="{emp>/newEmployee/department}"/>
-    <Input placeholder="Enter email" value="{emp>/newEmployee/email}"/>
+    <Input placeholder="Enter email" value="{emp>/newEmployee/email}" type="Email"/>
     <Input placeholder="Enter salary" value="{emp>/newEmployee/salary}"/>
     <Button text="Add Employee" press=".onAddEmployee"/>
     </VBox>

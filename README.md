@@ -31,43 +31,148 @@ An SAP Fiori application.
 #### Pre-requisites:
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+# Employee Directory - SAPUI5 Learning Project
 
+## Overview
 
-# SAPUI5 Employee Directory
+Employee Directory is a SAPUI5 application developed as part of my SAP Fiori learning journey. The goal of this project is to gain practical experience with SAPUI5 concepts such as MVC architecture, data binding, JSON models, filtering, sorting, CRUD operations, and reusable UI components.
 
-Learning project built using SAPUI5 in SAP Business Application Studio.
+---
 
-## Features Completed
+## Features
 
-### Day 1
+### Employee Management
 
-- Project creation using SAPUI5 template
-- JSON Model loading
-- Named model binding (`emp`)
-- Employee List display
-- Selection handling
-- Display selected employee details
-- Understanding:
-  - Default vs Named Models
-  - Property Paths
-  - Binding Context
-  - getBindingContext()
-  - getObject()
-  - setProperty()
+* Display employee records using SAPUI5 controls
+* Select employees and view details
+* Add new employees
+* Delete employees
+* Update employee information (In Progress)
 
-## Technologies
+### Search & Filter
 
-- SAPUI5
-- JavaScript
-- XML Views
-- JSONModel
-- Git
+* Search employees by Name
+* Search employees by Department
+* Dynamic filtering using `sap.ui.model.Filter`
 
-## Next Steps
+### Sorting
 
-- Employee Search
-- Filtering
-- Dialog Fragments
-- Routing
-- CRUD Operations
+* Sort employee data using `sap.ui.model.Sorter`
 
+### UI Components
+
+* Responsive SAPUI5 layout
+* Reusable Dialog Fragments
+* Table-based employee details view
+
+---
+
+## SAPUI5 Concepts Practiced
+
+### Models & Binding
+
+* JSONModel
+* Named Models
+* One-Way Binding
+* Two-Way Binding
+* Binding Context
+
+### MVC Architecture
+
+* XML Views
+* Controllers
+* Event Handling
+
+### Data Operations
+
+* Filtering
+* Sorting
+* CRUD Foundations
+
+### Development Tools
+
+* SAP Business Application Studio
+* Git & GitHub
+* SAP Fiori Tools
+
+---
+
+## Technology Stack
+
+| Technology   | Purpose                     |
+| ------------ | --------------------------- |
+| SAPUI5       | Frontend Framework          |
+| JavaScript   | Application Logic           |
+| XML Views    | UI Definition               |
+| JSONModel    | Client-side Data Management |
+| SAP BAS      | Development Environment     |
+| Git & GitHub | Version Control             |
+
+---
+
+## Project Screenshots
+
+### Employee Directory
+
+![Employee Directory](screenshots/Output%20screen.png)
+
+### Search and Sort Functionality
+
+![Search and Sort](screenshots/sort.png)
+
+### Add Employee Form
+
+![Add Employee](screenshots/Add%20Employee%20Form.png)
+
+### Employee Details
+
+![Employee Details](screenshots/Employee%20detail%20table.png)
+
+### Dialog Fragment
+
+![Dialog Fragment](screenshots/dialogfragment.png)
+
+---
+
+## Learning Progress
+
+### Completed
+
+* JSONModel
+* Data Binding
+* Named Models
+* Filtering
+* Sorting
+* Search Functionality
+* CRUD Basics
+* Dialog Fragments
+* Git Integration
+
+### Next Topics
+
+* Full CRUD Implementation
+* Routing & Navigation
+* ODataModel
+* Flexible Column Layout
+* Smart Controls
+* Unit Testing (QUnit)
+* OPA5 Integration Testing
+
+---
+
+## Running the Application
+
+```bash
+npm install
+npm start
+```
+
+---
+
+## Author
+
+**Madhusudan Amoli**
+
+SAPUI5 / SAP Fiori Learning Repository
+
+This project is continuously updated as I progress through SAPUI5 development and implement new concepts.
