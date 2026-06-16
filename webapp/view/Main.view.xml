@@ -2,19 +2,36 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <Panel headerText="Select an Employee from the list " expandable="true" expanded="true">
+    <headerContent>
+    
+    <Toolbar >
+    <ToolbarSpacer />
+    <Button
+    id="themeBtn"
+    
+    press=".onToggleTheme"
+    class="sapUiSmallMargin"
+     icon="sap-icon://palette"
+    />
+    </Toolbar>
+
+    </headerContent>
+        <Panel headerText="Select an Employee from the list " expandable="true" expanded="true">
         <content>
+        <HBox justifyContent="Start" alignItems="Center">
         <SearchField placeholder="Search by name..."
-    liveChange=".onSearch"/>
+    liveChange=".onSearch" class= "sapUiWide"/>
     <SearchField placeholder="Search by department..."
-    liveChange=".onSearch2"/>
-    <Select id="sortlist" change=".onSort">
+    liveChange=".onSearch2" class="srch"/>
+    <Select id="sortlist" change=".onSort" >
         <items>
         <core:Item key="" text="Sort by..." />
         <core:Item key="name" text="Sort by Name" />
         <core:Item key="department" text="Sort by Department" />
         </items> 
            </Select>
+        </HBox>
+        
         <List id="emplist" headerText="Emplyees" items="{emp>/employees}" mode="SingleSelectMaster" selectionChange=".onEmployeeSelect">
         <StandardListItem id="employeeItem" title="{emp>name}" description="{emp>department}" type="Active"/>
 

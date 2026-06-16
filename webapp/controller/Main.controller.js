@@ -3,8 +3,9 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
-    "sap/ui/model/Sorter"
-], (Controller, JSONModel, Filter, FilterOperator, Sorter) => {
+    "sap/ui/model/Sorter",
+    
+], (Controller, JSONModel, Filter, FilterOperator, Sorter,) => {
     "use strict";
 
     return Controller.extend("student.com.sap.training.advancedsapui5.employeedirectory.controller.Main", {
@@ -24,9 +25,32 @@ sap.ui.define([
             });
             this.getView().setModel(oModel, "emp");
             console.log("hello")
+
+          const thm = sap.ui.getCore().getConfiguration().getTheme();
+            const oButton = this.byId("themeBtn");
+            if (thm === "sap_horizon_dark") {
+                oButton.setText("Light Mode");
+            } else {
+                oButton.setText("Dark Mode");
+            }
           
 
         },
+     onToggleTheme: function () {
+
+    const oCore = sap.ui.getCore();
+    const sCurrentTheme = oCore.getConfiguration().getTheme();
+
+    const oButton = this.byId("themeBtn");
+
+    if (sCurrentTheme === "sap_horizon_dark") {
+        oCore.applyTheme("sap_horizon");
+        oButton.setText("Dark Mode");
+    } else {
+        oCore.applyTheme("sap_horizon_dark");
+        oButton.setText("Light Mode");
+    }
+},
         onEmployeeSelect: function (evt) {
             console.log("event fired");
             const itm = evt.getParameter("listItem").getBindingContext("emp");//get the selected item row and its binding context

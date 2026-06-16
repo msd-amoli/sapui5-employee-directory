@@ -3,7 +3,7 @@ xmlns ="sap.m"
 xmlns:core="sap.ui.core"
 >
 <Dialog title="Employee Details">
-    <Text text = "{emp>/selectedEmployee/name}"/>
+    <Text text = " Hi {emp>/selectedEmployee/name}"/>
     <beginButton>
     <Button text="delete" press=".onDeleteEmployee"/>
     
@@ -12,7 +12,7 @@ xmlns:core="sap.ui.core"
     <endButton>
     <Button text="close" press=".onCloseDialog"/>
     </endButton>
-    <Button text="edit" press=".onEditEmployee"/>
+   
    
 
 </Dialog>
