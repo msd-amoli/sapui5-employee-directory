@@ -122,7 +122,7 @@ Employee Directory is a SAPUI5 application developed as part of my SAP Fiori lea
 
 ### Add Employee Form
 
-![Add Employee](screenshots/Add%20Employee%20Form.png)
+![Add Employee](screenshots/Add%20Employee%20form.png)
 
 ### Employee Details
 
