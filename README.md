@@ -148,15 +148,6 @@ Employee Directory is a SAPUI5 application developed as part of my SAP Fiori lea
 * Dialog Fragments
 * Git Integration
 
-### Next Topics
-
-* Full CRUD Implementation
-* Routing & Navigation
-* ODataModel
-* Flexible Column Layout
-* Smart Controls
-* Unit Testing (QUnit)
-* OPA5 Integration Testing
 
 ---
 
